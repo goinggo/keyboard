@@ -8,7 +8,7 @@
 	make
 	cd ../pkgconfig
 	open -a TextEdit GoingGoKeyboard.pc
-	  Change $GOPATH to literal path such as /Users/bill/test
+	  Change $GOPATH to a literal path such as /Users/bill/test
 	pkg-config --cflags --libs GoingGoKeyboard
 	  -I/Users/bill/test/src/github.com/goinggo/keyboard/DyLib  -L/Users/bill/test/src/github.com/goinggo/keyboard/DyLib -lkeyboard
 	cd ..
@@ -16,12 +16,11 @@
 	go install
 	cd $GOPATH/bin
 	./keyboard
-
 */
 package main
 
 /*
-#cgo pkg-config: GoingGoKeyboard
+#cgo pkg-config: --define-variable=prefix=./ GoingGoKeyboard
 #include <keyboard.h>
 */
 import "C"
