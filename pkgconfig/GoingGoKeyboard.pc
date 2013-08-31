@@ -1,4 +1,4 @@
-prefix=/Users/bill/Spaces/PublicPackages/src/github.com/goinggo/keyboard
+prefix=$GOPATH/src/github.com/goinggo/keyboard
 exec_prefix=${prefix}
 libdir=${exec_prefix}/DyLib
 includedir=${prefix}/DyLib
