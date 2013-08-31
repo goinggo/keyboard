@@ -1,8 +1,15 @@
+/*
+	-- To build this code set this variable and verify the pkg-config tool can find the pkg-config file
+	export PKG_CONFIG_PATH=$HOME/Spaces/PublicPackages/src/github.com/goinggo/keyboard/pkgconfig
+	pkg-config --cflags --libs GoingGoKeyboard
+
+	-- To run this code set this variable so the dynamic library can be found at runtime
+	export DYLD_LIBRARY_PATH=$HOME/Spaces/PublicPackages/src/github.com/goinggo/keyboard/DyLib
+*/
 package main
 
 /*
-#cgo CFLAGS: -IDyLib
-#cgo LDFLAGS: -L. -lkeyboard
+#cgo pkg-config: GoingGoKeyboard
 #include <keyboard.h>
 */
 import "C"

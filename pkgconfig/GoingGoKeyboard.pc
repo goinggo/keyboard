@@ -1,0 +1,12 @@
+prefix=/Users/bill/Spaces/PublicPackages/src/github.com/goinggo/keyboard
+exec_prefix=${prefix}
+libdir=${exec_prefix}/DyLib
+includedir=${prefix}/DyLib
+libname=keyboard
+ 
+Name: GoingGoKeyboard
+Description: GoingGo - C API for Keyboard
+Version: 1.0
+Requires:
+Libs: -L${libdir} -l${libname} 
+Cflags: -I${includedir}
