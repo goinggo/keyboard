@@ -1,12 +1,22 @@
 /*
-	-- To build this code set this variable and verify the pkg-config tool can find the pkg-config file
+	export GOPATH=$HOME/test
 	export PKG_CONFIG_PATH=$GOPATH/src/github.com/goinggo/keyboard/pkgconfig
-	pkg-config --cflags --libs GoingGoKeyboard
-
-	-- To run this code set this variable so the dynamic library can be found at runtime
 	export DYLD_LIBRARY_PATH=$GOPATH/src/github.com/goinggo/keyboard/DyLib
 
-	go get github.com/goinggo/keyboard
+	go get -d github.com/goinggo/keyboard
+	cd $GOPATH/src/github.com/goinggo/keyboard/DyLib
+	make
+	cd ../pkgconfig
+	open -a TextEdit GoingGoKeyboard.pc
+	  Change $GOPATH to literal path such as /Users/bill/test
+	pkg-config --cflags --libs GoingGoKeyboard
+	  -I/Users/bill/test/src/github.com/goinggo/keyboard/DyLib  -L/Users/bill/test/src/github.com/goinggo/keyboard/DyLib -lkeyboard
+	cd ..
+	go build
+	go install
+	cd $GOPATH/bin
+	./keyboard
+
 */
 package main
 
