@@ -1,21 +1,20 @@
 /*
+	// This will build on the Mac Only. The DyLib has been pre-built.
+
+	// Set these variable before getting and building the code
 	export GOPATH=$HOME/test
 	export PKG_CONFIG_PATH=$GOPATH/src/github.com/goinggo/keyboard/pkgconfig
 	export DYLD_LIBRARY_PATH=$GOPATH/src/github.com/goinggo/keyboard/DyLib
 
-	go get -d github.com/goinggo/keyboard
-	cd $GOPATH/src/github.com/goinggo/keyboard/DyLib
-	make
-	cd ../pkgconfig
-	open -a TextEdit GoingGoKeyboard.pc
-	  Change $GOPATH to a literal path such as /Users/bill/test
-	pkg-config --cflags --libs GoingGoKeyboard
-	  -I/Users/bill/test/src/github.com/goinggo/keyboard/DyLib  -L/Users/bill/test/src/github.com/goinggo/keyboard/DyLib -lkeyboard
-	cd ..
-	go build
-	go install
+	// Get, build and install the code
+	go get github.com/goinggo/keyboard
+
+	// Run the code
 	cd $GOPATH/bin
 	./keyboard
+
+	// Show things are set correctly
+	pkg-config --cflags --libs GoingGoKeyboard
 */
 package main
 
