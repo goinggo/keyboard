@@ -2,7 +2,7 @@
 	// This will build on the Mac Only. The DyLib has been pre-built.
 
 	// Set these variable before getting and building the code
-	export GOPATH=$HOME/test
+	export GOPATH=$HOME/keyboard
 	export PKG_CONFIG_PATH=$GOPATH/src/github.com/goinggo/keyboard/pkgconfig
 	export DYLD_LIBRARY_PATH=$GOPATH/src/github.com/goinggo/keyboard/DyLib
 
