@@ -19,7 +19,7 @@
 package main
 
 /*
-#cgo pkg-config: --define-variable=prefix=./ GoingGoKeyboard
+#cgo pkg-config: --define-variable=prefix=. GoingGoKeyboard
 #include <keyboard.h>
 */
 import "C"
