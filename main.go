@@ -1,5 +1,14 @@
+// Copyright 2013 Ardan Studios. All rights reserved.
+// Use of this source code is governed by a BSD-style
+// license that can be found in the LICENSE file.
+
 /*
-	// This will build on the Mac Only. The DyLib has been pre-built.
+	This program provides sample code that shows you how to bind a dynamic library using CGO.
+
+	Ardan Studios
+	12973 SW 112 ST, Suite 153
+	Miami, FL 33186
+	bill@ardanstudios.com
 
 	// Set these variable before getting and building the code
 	export GOPATH=$HOME/keyboard
