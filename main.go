@@ -37,7 +37,6 @@ import (
 )
 
 func main() {
-
 	C.InitKeyboard()
 
 	fmt.Printf("\nEnter: ")
